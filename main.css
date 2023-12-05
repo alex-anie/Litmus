@@ -41,7 +41,7 @@ html {
 
 article {
     width: 100vw;
-    background-image: url('illustration.webp');
+    background-image: url('./illustration.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0px;
