@@ -1,9 +1,200 @@
+/* ***** [GLOBAL] ****** */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,900;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400;500;600;700;800&display=swap');
+
 *,*::after,*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    
+html {
+    scroll-behavior: smooth;
+    font-family: var(--default);
 }
+
+
+:root {
+    /* Fonts */
+    --default: calibri;
+    --heading: 'Sen';
+    --paragraph-1: 'Inter';
+    --paragraph-2: 'Inter Tight';
+    --paragraph-3: 'Lato';
+    --paragraph-4: 'Roboto';
+    
+    /*Sizing*/
+    --sm-number: 0.625em; /*10px*/ 
+    --md-number: 1.25em; /*20px*/
+    --lg-number: 1.875em; /*30px*/
+
+    /* Colors */
+    --white: rgb(255 255 255);
+    --amber-50: rgb(255 251 235);
+    --amber-100: rgb(254 243 199);
+    --amber-500: rgb(245 158 11);
+    --amber-800: rgb(146 64 14);
+}
+
+
+/* ****** [BODY SECTION] ******** */
+
+article {
+    width: 100vw;
+    background-image: url('/assets/illustration.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0px;
+}
+
+.site-logo {
+    padding: var(--lg-number);
+    display: flex;
+    justify-content: start;
+}
+
+.site-logo img {
+    width: calc(var(--lg-number) * 2.5);
+    margin: 0;
+}
+
+
+/* Center all element by viewport weight/heigh */
+.size_viewport_align_center {
+    width: 85vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+.size_viewport_align_center h1 {
+    font-size: calc(var(--lg-number) * 2);
+    font-family: var(--heading);
+    font-weight: 800;
+}
+
+.size_viewport_align_center p {
+    font-family: var(--paragraph-1);
+    font-size: calc(var(--lg-number));
+    font-weight: 200;
+    margin: 1em 0;
+}
+
+.size_viewport_align_center .btn {
+    border: none;
+    padding: 1em 2em;
+    font-size: var(--md-number);
+    border-radius: 30px;
+    -webkit-user-select: none;
+    user-select: none;
+    color: var(--amber-50);
+    background-color: var(--amber-800);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.size_viewport_align_center .btn:hover {
+    background-color: var(--amber-500);
+}
+
+/* This is button wrapper for the hero-section, to center */
+.hero-section .hero-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--sm-number);
+}
+
+.hero-section h1 {
+    text-align: center;
+}
+
+.stunning-section {
+    justify-content: left;
+}
+
+.drag-n-drop {
+    justify-content: right;
+}
+
+.mobile-friendly {
+    justify-content: left;
+}
+
+.custom-domain {
+    justify-content: right;
+}
+
+.make-ur-idea h1 {
+    text-align: center;
+}
+.make-ur-idea-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--lg-number);
+}
+
+.footer {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.footer .logo-text {
+    display: flex;
+    justify-content: center;
+    column-gap: var(--md-number);
+}
+
+.footer .logo-text img {
+    width: calc(var(--lg-number) * 2.5);
+    margin: 0;
+}
+
+.footer .line {
+    border-left: 1px solid black;
+    margin: 0;
+}
+
+.footer .text {
+    font-family: var(--paragraph-1);
+    font-weight: 300;
+    transform: translateY(20%);
+}
+
+/* Second section */
+.policy-n-teams {
+    display: flex;
+    justify-content: space-between;
+    margin:calc(var(--lg-number)) 0;
+}
+
+.policy-inner {
+    display: flex;
+    column-gap: var(--md-number);
+}
+
+a.text {
+    text-decoration: none;
+    color: black;
+}
+
+a.text:hover {
+    color: var(--amber-800);
+}
+
+@media screen and (max-width: 800px) {
+    .size_viewport_align_center h1 {
+        font-size: calc(var(--md-number) * 2);
+        font-weight: 600;
+    }
+
+    .size_viewport_align_center p {
+        font-size: calc(var(--md-number));
+    }
+
+    .footer {
+        width: 95vw;
+        white-space: nowrap;
+    }
+}
+
