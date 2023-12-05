@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
     font-family: var(--default);
+    overflow-x: hidden;
 }
 
 
@@ -108,25 +109,61 @@ article {
     text-align: center;
 }
 
+/* Stunning section */
 .stunning-section {
     justify-content: left;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 2s linear;
 }
+
 
 .drag-n-drop {
     justify-content: right;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2s linear;
 }
 
-.mobile-friendly {
+.mobile-friendly{
     justify-content: left;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+.slide-in-left {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .custom-domain {
     justify-content: right;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+.slide-in-right {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .make-ur-idea h1 {
     text-align: center;
 }
+
+.make-ur-idea {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+.slide-in-top {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 .make-ur-idea-btn-wrap {
     display: flex;
     justify-content: center;
